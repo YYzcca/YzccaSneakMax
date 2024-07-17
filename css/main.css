@@ -24,7 +24,7 @@ main header nav a {
 }
 @media (max-width: 992px) and (min-width: 768px) {
   main header nav a {
-    content: url(/img/catalog.svg);
+    content: url(../img/catalog.svg);
     width: 30px;
     height: 30px;
     fill: darkgreen;
@@ -43,29 +43,29 @@ main header nav a + a {
 }
 @media (max-width: 992px) and (min-width: 768px) {
   main header nav a + a {
-    content: url(/img/about.svg);
+    content: url(../img/about.svg);
     margin-left: 40px;
   }
 }
 @media (max-width: 992px) and (min-width: 768px) {
   main header nav a + a + a {
-    content: url(/img/podbor.svg);
+    content: url(../img/podbor.svg);
     fill: darkgreen;
   }
 }
 @media (max-width: 992px) and (min-width: 768px) {
   main header nav a + a + a + a {
-    content: url(/img/team.svg);
+    content: url(../img/team.svg);
   }
 }
 @media (max-width: 992px) and (min-width: 768px) {
   main header nav a + a + a + a + a {
-    content: url(/img/dostavka.svg);
+    content: url(../img/dostavka.svg);
   }
 }
 @media (max-width: 992px) and (min-width: 768px) {
   main header nav a + a + a + a + a + a {
-    content: url(/img/contacts.svg);
+    content: url(../img/contacts.svg);
   }
 }
 @media (max-width: 1200px) {
@@ -660,7 +660,7 @@ main::after {
   display: none;
 }
 .filter input[type=checkbox]:checked + label > span.fake-chek::after {
-  content: url(/img/Group.svg);
+  content: url(../img/Group.svg);
 }
 
 table {
@@ -1039,7 +1039,7 @@ table input[type=checkbox]:checked + label + p {
   display: none;
 }
 .ideal .ideal__container .ideal__content input[type=checkbox]:checked + label > span.fake-chek::after {
-  content: url(/img/Group.svg);
+  content: url(../img/Group.svg);
 }
 .ideal .ideal__container .ideal__content label {
   margin-bottom: 0;
@@ -1868,7 +1868,7 @@ footer .flex-box nav a {
 }
 @media (max-width: 992px) {
   footer .flex-box nav a {
-    content: url(/img/catalog.svg);
+    content: url(../img/catalog.svg);
     width: 30px;
     height: 30px;
     fill: darkgreen;
@@ -1887,34 +1887,34 @@ footer .flex-box nav a + a {
 }
 @media (max-width: 992px) {
   footer .flex-box nav a + a {
-    content: url(/img/about.svg);
+    content: url(../img/about.svg);
     margin-left: 40px;
   }
 }
 @media (max-width: 992px) {
   footer .flex-box nav a + a + a {
-    content: url(/img/podbor.svg);
+    content: url(../img/podbor.svg);
     fill: darkgreen;
   }
 }
 @media (max-width: 992px) {
   footer .flex-box nav a + a + a + a {
-    content: url(/img/team.svg);
+    content: url(../img/team.svg);
   }
 }
 @media (max-width: 992px) {
   footer .flex-box nav a + a + a + a + a {
-    content: url(/img/dostavka.svg);
+    content: url(../img/dostavka.svg);
   }
 }
 @media (max-width: 992px) {
   footer .flex-box nav a + a + a + a + a + a {
-    content: url(/img/contacts.svg);
+    content: url(../img/contacts.svg);
   }
 }
 @media (max-width: 992px) {
   footer .flex-box nav a + a + a + a + a + a + a {
-    content: url(/img/Vector.svg);
+    content: url(../img/Vector.svg);
   }
 }
 @media (max-width: 1200px) {
