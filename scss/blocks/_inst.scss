@@ -1,0 +1,167 @@
+.inst{
+    form{
+        z-index: 2050;
+        background: #484283;
+        padding: 40px 20px;
+        width: 380px;
+        border-radius: 4px;
+        margin-right: 60px;
+        h3{
+            color: #FFF;
+            font-family: "Intro";
+            text-align: center;
+            font-size: 30px;
+            line-height: normal;
+            font-weight: 700;
+            margin: 0;
+        }
+        p{
+            text-align: center;
+            font-family: "IntroBook";
+            font-size: 16px;
+            line-height: normal;
+            color: #FFF;
+            margin: 20px 0 40px 0;
+        }
+        input{
+            width: 100%;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            padding: 18px 20px;
+            border: none;
+        }
+        input:focus{
+            outline: none;
+        }
+        span{
+            display: none;
+            margin-left: 5px;
+            color: rgb(255, 0, 0);
+        }
+        button{
+            width: 100%;
+            height: 60px;
+            padding: 0;
+        }
+        input::placeholder{
+            font-family: inherit;
+            font-size: 16px;
+            line-height: 140%;
+            color: #B2B5BB;
+        }
+    }
+    .form-active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-50%);
+        position: fixed;
+        top: 50%;
+        margin: 0;
+    }
+    @media(max-width: 1200px){
+        form{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-50%);
+            position: fixed;
+            top: 56%;
+            margin: 0;
+            transition: all .2s ease-in;
+        }
+    }
+    @media(max-width: 1200px){
+        form{
+            width: 100vw;
+        }
+    }
+    @media(max-width: 1200px){
+        .flex-box{
+            justify-content: center;
+        }
+    }
+    .insta{
+        text-align: center;
+    }
+    .is-container{
+        display: grid;
+        grid-template-columns: 157px 330px 157px;
+        grid-column-gap: 18px;
+        align-items: stretch;
+        margin-top: 21px;
+        img{
+            cursor: pointer;
+            transition: transform 0.2s ease-in;
+        }
+        img:hover{
+            transform: scale(1.05);
+        }
+        .is-left,
+        .is-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 157px;
+        }
+        @media (max-width:768px){
+            .is-left,
+            .is-right{
+                width: 107px;
+                justify-content: space-evenly;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        @media (max-width:576px){
+            .is-left,
+            .is-right{
+                display: none;
+            }
+        }
+    }
+    @media (max-width:768px){
+        .is-container{
+            display: grid;
+            grid-template-columns: 107px 270px 107px;
+            grid-column-gap: 13px;
+            align-items: stretch;
+            margin-top: 21px;
+            .is-center{
+                width: 270px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width:576px){
+        .is-container{
+            display: block;
+        }
+    }
+    #forFormBtn{
+        display: none;
+        font-family: "IntroBook";
+        text-align: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 15px;
+        background: none;
+        border: none;
+        text-decoration: underline;
+        color: #3b3b3bd2;
+    }
+    @media(max-width: 1200px){
+        #forFormBtn{
+            display: block;
+        }
+    }
+    #forFormBtn:focus{
+        outline: none;
+    }
+}
+.form-active + .modal-background{
+    visibility: visible;
+    opacity: 0.4;
+}

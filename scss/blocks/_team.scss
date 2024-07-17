@@ -1,0 +1,73 @@
+.team{
+    position: relative;
+    background: var(--bg);
+    color: #FFF;
+    overflow: hidden;
+    .container{
+        position: relative;
+        z-index: 999;
+    }
+    .circle-team-one{
+        border: none;
+        height: 686px;
+        width: 686px;
+        background: var(--accent);
+        top: 0;
+        right: 0;
+        transform: translate(145px, -150px);
+    }
+    .circle-team-two{
+        height: 644px;
+        width: 644px;
+        transform: translate(220px, -336px);
+        top: 0;
+        right: 0;
+    }
+    .circle-team-three{
+        height: 297px;
+        width: 297px;
+        top: 253px;
+        right: 0;
+        transform: translateX(182px);
+    }
+    h3{
+        font-weight: 700;
+        line-height: normal;
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+    .team-cards__container{
+        display: flex;
+        flex-wrap: wrap;
+        img{
+            width: 380px;
+            height: 410px;
+            border-radius: 4px;
+        }
+        h4{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: normal;
+            color: #FFF;
+            margin: 20px 0;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            font-family: "IntroBook";
+        }
+        row-gap: 36px;
+        justify-content: space-between;
+    }
+    @media(max-width: 1200px){
+        .team-cards__container{
+            justify-content: space-around;
+        }
+    }
+}
+@media(max-width: 992px){
+    .team{
+        display: none;
+    }
+}

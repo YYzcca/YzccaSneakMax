@@ -1,0 +1,130 @@
+.cart-head{
+    transition: all .2s ease-in;
+    position: absolute;
+    z-index: 1050;
+    right: 0;
+    top: 100%;
+    height: 414px;
+    width: 480px;
+    background: #FFF;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5%);
+    h5{
+        position: absolute;
+        top: 150px;
+        color: #4D4D4D;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+    }
+    .cart-head__content{
+        margin-right: 5px;
+        margin-top: 20px;
+        margin-bottom: 13px;
+        position: relative;
+        height: 290px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin: 20px 5px 13px 0;
+    }
+    #miniCart{
+        margin-top: -20px;
+    }
+    #miniCart + #miniCart {
+        margin-top: 0;
+    }
+    .cart-head__content::-webkit-scrollbar {
+        width: 4px;
+        background: rgba(77, 77, 77, 0.10);
+        border-radius: 5px;
+    }
+    .cart-head__content::-webkit-scrollbar-thumb {
+        background-color: #223c50;
+        border-radius: 5px;
+        background: rgba(77, 77, 77, 0.20);
+    }
+    .cart-head__footer{
+        height: 91px;
+        padding: 20px;
+        box-shadow: 0px -4px 10px 0px rgba(0, 13, 84, 0.10);
+        display: flex;
+        justify-content: space-between;
+        .cart-head-cost{
+            display: inline-block;
+            p{
+                font-family: "IntroBook";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #4D4D4D;
+                margin-bottom: 10px;
+            }
+            span{
+                font-family: "Intro";
+                font-size: 20px;
+                font-weight: 700;
+                line-height: normal;
+                color: #4D4D4D;
+            }
+        }
+        button{
+            height: 50px;
+            padding: 0 47px;
+        }
+    }
+}
+.miniCart-active{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.miniCart-active + .modal-background{
+    visibility: visible;
+    opacity: 0.4;
+}
+#miniCart{
+    transition: background-color .15s ease-in;
+    cursor: pointer;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 7px 0 20px;
+    img{
+        width: 100px;
+        height: 70px;
+        margin-right: 10px;
+    }
+    .cost-info{
+        max-width: 268px;
+    }
+    h3{
+        font-family: "IntroBook";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #4D4D4D;
+        margin-bottom: 15px;
+    }
+    strong{
+        font-family: "Intro";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        color: #4D4D4D;
+    }
+    button{
+        cursor: pointer;
+        margin-right: 0;
+        margin-left: auto;
+        border: none;
+        background: transparent;
+    }
+    button:focus{
+        outline: none;
+    }
+}
+#miniCart:hover{
+    background-color: rgba(204, 217, 242, 0.2);
+}

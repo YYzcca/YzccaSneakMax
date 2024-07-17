@@ -1,0 +1,179 @@
+@import "./blocks/main";
+@import "./blocks/catalog";
+@import "./blocks/filters";
+@import "./blocks/about";
+@import "./blocks/ideal";
+@import "./blocks/team";
+@import "./blocks/questions";
+@import "./blocks/contacts";
+@import "./blocks/inst";
+@import "./blocks/footer";
+@import "./blocks/modal";
+@import "./blocks/cart-head";
+@import "./blocks/cart";
+@import "./blocks/slide";
+
+
+@font-face {
+    font-family: "Intro";
+    font-weight: 400;
+    src: local("Intro"),
+         url("../fonts/Intro-Trial-Rg.ttf") format("woff2"),
+         url("../fonts/Intro-Trial-Rg.ttf") format("woff");
+}
+@font-face {
+    font-family: "Intro";
+    font-weight: 700;
+    src: local("Intro"),
+         url("../fonts/Intro-Trial-Bd.ttf") format("woff2"),
+         url("../fonts/Intro-Trial-Bd.ttf") format("woff");
+}
+@font-face {
+    font-family: "Intro";
+    font-weight: 600;
+    src: local("Intro"),
+         url("../fonts/intro_regular.ttf") format("woff2"),
+         url("../fonts/intro_regular.ttf") format("woff");
+}
+@font-face {
+    font-family: "IntroBook";
+    font-weight: 400;
+    src: local("Intro"),
+         url("../fonts/Intro-Book.ttf") format("woff2"),
+         url("../fonts/Intro-Book.ttf") format("woff");
+}
+:root{
+    --accent:#F14F4F;
+    --bg:#484283;
+    --small-bg:#FFF4EE;
+    --gray:#444B58;
+    --light-gray:#B2B5BB;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+*, body{
+    font-family: "Intro";
+}
+body{
+    overflow-x: hidden;
+}
+section{
+    padding: 60px 0;
+}
+.default-btn{
+    transition: background 0.2s ease-in;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Intro";
+    font-family: inherit;
+    padding: 22px 47px;
+    border-radius: 4px;
+    background: var(--accent);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.default-btn:hover{
+    background: #CC4949;
+}
+.default-btn:active{
+    background: #8C2828;
+}
+.default-btn:focus{
+    border: none;
+    outline: none;
+}
+.logo{
+    margin-top: -5px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFF;
+}
+a:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+.flex-box{
+    display: flex;
+}
+span.fake-chek{
+    margin-right: 10px;
+    position: relative;
+    border: 1px solid #DBBBA9;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: transparent;
+}
+span.fake-chek::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+}
+.circle{
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    border-radius: 50%;       
+}
+h3.section-h{
+    color: var(--gray);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+}
+iframe{
+    width: 680px;
+    height: 497px;
+}
+@media(max-width:992px){
+    iframe{
+        width: 380px;
+        height: 397px;
+        margin-top: 30px;
+    }
+}
+@media(max-width:768px){
+    iframe{
+        width: 300px;
+        height: 397px;
+        margin-top: 70px;
+    }
+}
+@media(max-width:576px){
+    iframe{
+        display: none;
+    }
+}
+@keyframes IdealAnim {
+    0%{
+        border: 1px solid #DBBBA9;
+        transform: none;
+    }
+    20%{
+        border: 1px solid red;
+        transform: translateX(-1px);
+    }
+    40%{
+        border: 1px solid red;
+        transform: translateX(1px);
+    }
+    60%{
+        border: 1px solid red;
+        transform: translateX(-1px);
+    }
+    80%{
+        border: 1px solid red;
+        transform: translateX(1px);
+    }
+    100%{
+        border: 1px solid #DBBBA9;
+        transform: none;
+    }
+}

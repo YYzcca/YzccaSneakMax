@@ -1,0 +1,301 @@
+:root{
+    --img-hight: 293px;
+    --img-widh: 280px;
+}
+.catalog{
+    display: flex;
+    position: relative;
+    img{
+        transition: transform 0.2s ease-in;
+    }
+    .cross-card:hover > img {
+        transform: scale(1.02);
+    }
+    .cross-card:hover > img + .overlay{
+        transform: scale(1.02);
+        opacity: 0.4;
+        visibility: visible;
+    }
+    .cross-card:hover > img + .overlay + .check{
+        opacity: 1;
+        visibility: visible;
+    }
+    .cross-card:hover > img + .overlay + .check + .inCart{
+        opacity: 1;
+        visibility: visible;
+    }
+    .overlay{
+        transition: all .2s ease-in;
+        background: #FFF;
+        opacity: 0;
+        position: absolute;
+        height: 293px;
+        width: 280px;
+        border-radius: 4px;
+        top: 0;
+        visibility: hidden;
+    }
+    .check, .inCart{
+        transition: all .2s ease-in;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        top: calc(var(--img-hight)/2);
+        transform: translateY(-50%);
+        visibility: hidden;
+        opacity: 0;
+        svg{
+            position: absolute;
+            transition: opacity .2s ease-in;
+        }
+    }
+    .check{
+        left: 40px;
+    }
+    .inCart{
+        z-index: 1049;
+        right: 40px;
+    }
+    .check:hover > svg, .inCart:hover > svg{
+        opacity: 0.9;
+    }
+    .flex-box{
+        align-items: start;
+    }
+    h3{
+        margin-bottom: 40px;
+    }
+    .filter{
+        padding: 20px;
+        background: var(--small-bg);
+        border-radius: 4px;
+        margin-right: 20px;
+        h4{
+            font-size: 24px;
+            line-height: normal;
+            font-weight: 400;
+        }
+        @media(max-width: 992px){
+            h4{
+                margin-bottom: 35px;
+            }
+        }
+        p.title{
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: normal;
+            font-size: 16px;
+        }
+        .filter--price{
+            padding-top: 17px;
+            border: 1px solid #B2B5BB;
+            border-radius: 4px;
+            text-align: center;
+            width: 240px;
+            border-bottom: none;
+            input[type="number"]{
+                border: none;
+                background: var(--small-bg);
+                font-family: inherit;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                color: var(--text);
+                width: 49%;
+                text-align: center;
+                padding: 0 0;
+            }
+            input[type="number"] + input[type="number"] {
+                border-left: 1px solid #B2B5BB;
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                margin: 0;
+                -webkit-appearance: none;
+            }
+            input[type=number]:focus{
+                border: none;
+                outline: none;
+            }
+        }
+        @media(max-width: 1200px){
+            .filter--price{
+                margin-bottom: 30px;
+                border-bottom: 1px solid #B2B5BB;
+                padding-bottom: 15px;
+                padding-top: 15px;
+            }
+        }
+        button{
+            transition: background 0.2s ease-in;
+            width: 100%;
+            margin-top: 20px;
+            padding: 20px 0;
+            background: var(--gray);
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            color: #FFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        @media(max-width: 992px){
+            button{
+                margin-top: 35px;
+            }
+        }
+        button:hover{
+            background: #31343C;
+        }
+        button:active{
+            background: #26282e;
+        }
+        button:focus{
+            outline: none;
+        }
+        button + button{
+            background: transparent;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            color: var(--text);
+            text-align: center;
+            display: block;
+            padding: 0;
+            margin-top: 20px;
+        }
+        button + button:hover{
+            background: transparent;
+        }
+        button + button:active{
+            color: #26282e;
+            background: transparent;
+        }
+    }
+    @media(max-width: 992px){
+        .filter{
+            transition: all .3s ease-in;
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            z-index: 1050;
+            left: -190px;
+            top: 50vh;
+            transform: translateY(-50%);
+            height: 85vh;
+            padding-top: 50px;
+        }
+    }
+    .filActive{
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+    }
+    .filActive + .modal-background{
+        visibility: visible;
+        opacity: 0.4;
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:20px;
+        button{
+            margin-left: auto;
+            margin-right: auto;
+            grid-column: 2;
+            grid-row: span 2;
+        }
+        @media(max-width: 1200px){
+            button{
+                grid-column:  1 / 3;
+            }
+        }
+        .cross-card{
+            position: relative;
+            cursor: pointer;
+            width: 280px;
+            img{
+                height: var(--img-hight);
+                width: var(--img-widh);
+                border-radius: 4px;
+            }
+            @media(max-width: 768px){
+                img{
+                    height: 220px;
+                    width: 220px;
+                }
+            }
+            h6{
+                font-family: "IntroBook";
+                font-size: 16px;
+                line-height: normal;
+                color: #444B58;
+                margin-top: 10px;
+            }
+            p#cost{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: normal;
+                color: var(--gray);
+            }
+        }
+        @media(max-width: 1200px){
+            .cross-card{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @media(max-width: 768px){
+            .cross-card{
+                width: 240px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .hidden-cross-card{
+            display: none;
+        }
+    }
+    @media(max-width: 1200px){
+        .cards-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media(max-width: 992px){
+        .cards-container{
+            width: 100%;
+            justify-self: center;
+        }
+    }
+    @media(max-width: 576px){
+        .cards-container{
+            display: block;
+        }
+    }
+    @media(max-width: 1200px){
+        .flex-box{
+            justify-content: space-between;
+        }
+        button{
+            grid-column: 1;
+        }
+    }
+    @media(max-width: 1200px){
+        button{
+            width: 200px;
+            height: 50px;
+            display: block;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+    }
+}
+

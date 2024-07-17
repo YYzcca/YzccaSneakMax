@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakMax</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <!-- modal -->
+    <div class="modal" style="display: block;">
+        <button id="modalClose">
+            <div class="close-container">
+                <div class="close-line" id="l1"></div>
+                <div class="close-line" id="l2"></div>
+            </div>
+        </button>
+        <div class="flex-box modal__header-container">
+            <div class="modal-gallery">
+                <img class="big" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                <div class="small-container">
+                    <img class="small" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                    <img class="small" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                    <img class="small" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                    <img class="small" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                    <img class="small" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                    <img class="small" src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="ops">
+                </div>
+            </div>
+            <div class="modal-nheader">
+                <span>Артикул:</span><span>879876</span><span>В наличии:</span><p>13 шт</p>
+                <h3 id="hModal">Женские кроссовки Puma Force 1 Shadow</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="116" height="20" viewBox="0 0 116 20" fill="none">
+                    <path d="M9.04894 2.92705C9.3483 2.00574 10.6517 2.00574 10.9511 2.92705L12.0206 6.21885C12.1545 6.63087 12.5385 6.90983 12.9717 6.90983H16.4329C17.4016 6.90983 17.8044 8.14945 17.0207 8.71885L14.2205 10.7533C13.87 11.0079 13.7234 11.4593 13.8572 11.8713L14.9268 15.1631C15.2261 16.0844 14.1717 16.8506 13.388 16.2812L10.5878 14.2467C10.2373 13.9921 9.7627 13.9921 9.41221 14.2467L6.61204 16.2812C5.82833 16.8506 4.77385 16.0844 5.0732 15.1631L6.14277 11.8713C6.27665 11.4593 6.12999 11.0079 5.7795 10.7533L2.97933 8.71885C2.19562 8.14945 2.59839 6.90983 3.56712 6.90983H7.02832C7.46154 6.90983 7.8455 6.63087 7.97937 6.21885L9.04894 2.92705Z" fill="#F14F4F"/>
+                    <path d="M33.0489 2.92705C33.3483 2.00574 34.6517 2.00574 34.9511 2.92705L36.0206 6.21885C36.1545 6.63087 36.5385 6.90983 36.9717 6.90983H40.4329C41.4016 6.90983 41.8044 8.14945 41.0207 8.71885L38.2205 10.7533C37.87 11.0079 37.7234 11.4593 37.8572 11.8713L38.9268 15.1631C39.2261 16.0844 38.1717 16.8506 37.388 16.2812L34.5878 14.2467C34.2373 13.9921 33.7627 13.9921 33.4122 14.2467L30.612 16.2812C29.8283 16.8506 28.7739 16.0844 29.0732 15.1631L30.1428 11.8713C30.2766 11.4593 30.13 11.0079 29.7795 10.7533L26.9793 8.71885C26.1956 8.14945 26.5984 6.90983 27.5671 6.90983H31.0283C31.4615 6.90983 31.8455 6.63087 31.9794 6.21885L33.0489 2.92705Z" fill="#F14F4F"/>
+                    <path d="M81.0489 2.92705C81.3483 2.00574 82.6517 2.00574 82.9511 2.92705L84.0206 6.21885C84.1545 6.63087 84.5385 6.90983 84.9717 6.90983H88.4329C89.4016 6.90983 89.8044 8.14945 89.0207 8.71885L86.2205 10.7533C85.87 11.0079 85.7234 11.4593 85.8572 11.8713L86.9268 15.1631C87.2261 16.0844 86.1717 16.8506 85.388 16.2812L82.5878 14.2467C82.2373 13.9921 81.7627 13.9921 81.4122 14.2467L78.612 16.2812C77.8283 16.8506 76.7739 16.0844 77.0732 15.1631L78.1428 11.8713C78.2766 11.4593 78.13 11.0079 77.7795 10.7533L74.9793 8.71885C74.1956 8.14945 74.5984 6.90983 75.5671 6.90983H79.0283C79.4615 6.90983 79.8455 6.63087 79.9794 6.21885L81.0489 2.92705Z" fill="#F14F4F"/>
+                    <path d="M57.0489 2.92705C57.3483 2.00574 58.6517 2.00574 58.9511 2.92705L60.0206 6.21885C60.1545 6.63087 60.5385 6.90983 60.9717 6.90983H64.4329C65.4016 6.90983 65.8044 8.14945 65.0207 8.71885L62.2205 10.7533C61.87 11.0079 61.7234 11.4593 61.8572 11.8713L62.9268 15.1631C63.2261 16.0844 62.1717 16.8506 61.388 16.2812L58.5878 14.2467C58.2373 13.9921 57.7627 13.9921 57.4122 14.2467L54.612 16.2812C53.8283 16.8506 52.7739 16.0844 53.0732 15.1631L54.1428 11.8713C54.2766 11.4593 54.13 11.0079 53.7795 10.7533L50.9793 8.71885C50.1956 8.14945 50.5984 6.90983 51.5671 6.90983H55.0283C55.4615 6.90983 55.8455 6.63087 55.9794 6.21885L57.0489 2.92705Z" fill="#F14F4F"/>
+                    <path d="M105.049 2.92705C105.348 2.00574 106.652 2.00574 106.951 2.92705L108.021 6.21885C108.155 6.63087 108.538 6.90983 108.972 6.90983H112.433C113.402 6.90983 113.804 8.14945 113.021 8.71885L110.22 10.7533C109.87 11.0079 109.723 11.4593 109.857 11.8713L110.927 15.1631C111.226 16.0844 110.172 16.8506 109.388 16.2812L106.588 14.2467C106.237 13.9921 105.763 13.9921 105.412 14.2467L102.612 16.2812C101.828 16.8506 100.774 16.0844 101.073 15.1631L102.143 11.8713C102.277 11.4593 102.13 11.0079 101.78 10.7533L98.9793 8.71885C98.1956 8.14945 98.5984 6.90983 99.5671 6.90983H103.028C103.462 6.90983 103.845 6.63087 103.979 6.21885L105.049 2.92705Z" fill="#F14F4F"/>
+                </svg>
+                <p>Выберите размер</p>
+                <input name="mInput" id="mSize" type="radio">
+                <label for="mSize"><p>36</p></label>
+                <input name="mInput" id="mSize2" type="radio">
+                <label for="mSize2">37</label>
+                <input name="mInput" id="mSize3" type="radio">
+                <label for="mSize3">38</label>
+                <input name="mInput" id="mSize4" type="radio">
+                <label for="mSize4">39</label>
+                <input name="mInput" id="mSize5" type="radio">
+                <label for="mSize5">40</label>
+                <div class="flex-box">
+                    <strong id="modalCost">19 789</strong>
+                    <span id="modalCost+">20 578</span>
+                </div>
+                <button id="inModalCart" class="default-btn">Заказать</button>
+                <div class="modal-adv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                        <path d="M6.35996 11.3038C6.21972 11.4442 6.02847 11.5227 5.82972 11.5227C5.63097 11.5227 5.43972 11.4442 5.29947 11.3038L1.06498 7.08415C0.625477 6.64627 0.625477 5.9364 1.06498 5.49927L1.59522 4.97098C2.03472 4.5331 2.74647 4.5331 3.18597 4.97098L5.82972 7.60497L12.9735 0.487588C13.4129 0.0497102 14.1254 0.0497102 14.5642 0.487588L15.0944 1.01588C15.5339 1.45376 15.5339 2.16363 15.0944 2.60076L6.35996 11.3038Z" fill="#B2B5BB"/>
+                    </svg>
+                    <span>Бесплатная доставка до двери</span>
+                </div>
+                <div class="modal-adv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                        <path d="M6.35996 11.3038C6.21972 11.4442 6.02847 11.5227 5.82972 11.5227C5.63097 11.5227 5.43972 11.4442 5.29947 11.3038L1.06498 7.08415C0.625477 6.64627 0.625477 5.9364 1.06498 5.49927L1.59522 4.97098C2.03472 4.5331 2.74647 4.5331 3.18597 4.97098L5.82972 7.60497L12.9735 0.487588C13.4129 0.0497102 14.1254 0.0497102 14.5642 0.487588L15.0944 1.01588C15.5339 1.45376 15.5339 2.16363 15.0944 2.60076L6.35996 11.3038Z" fill="#B2B5BB"/>
+                    </svg>
+                    <span>Оплата заказа при получении</span>
+                </div>
+                <div class="modal-adv">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                        <path d="M6.35996 11.3038C6.21972 11.4442 6.02847 11.5227 5.82972 11.5227C5.63097 11.5227 5.43972 11.4442 5.29947 11.3038L1.06498 7.08415C0.625477 6.64627 0.625477 5.9364 1.06498 5.49927L1.59522 4.97098C2.03472 4.5331 2.74647 4.5331 3.18597 4.97098L5.82972 7.60497L12.9735 0.487588C13.4129 0.0497102 14.1254 0.0497102 14.5642 0.487588L15.0944 1.01588C15.5339 1.45376 15.5339 2.16363 15.0944 2.60076L6.35996 11.3038Z" fill="#B2B5BB"/>
+                    </svg>
+                    <span>Обмен в течении двух недель</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-ncontent">
+            <div class="overview">
+                <h4>Описание</h4>
+                <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+            </div>
+            <div class="characteristics">
+                <h4>Характеристики</h4>
+                <p>Пол: Мужской</p><p>Цвета: Разноцветный</p><p>Состав: Кожа, текстиль, резина</p><p>Страна: Вьетнам</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+    <!-- /modal -->
+
+    <!-- fullCart -->
+     <div class="full-carts">
+        <button id="modalClose">
+            <div class="close-container">
+                <div class="close-line" id="l1"></div>
+                <div class="close-line" id="l2"></div>
+            </div>
+        </button>
+        <div class="full-cart-top">
+            <p>Оформление заказа</p>
+            <span>Заказ 3456 67</span>
+        </div>
+        <div class="full-cart-container">
+            <div id="forBG">
+                <div id="count"><span>Товаров в заказе:</span><strong id="fullLenght"></strong></div>
+                <div id="summ"><span>Общая сумма заказа:</span><strong id="fullSumm"></strong></div>
+                <button id="compound">Состав заказа 
+                    <div id="vector">
+                        <svg width="7.000000" height="3.540771" viewBox="0 0 7 3.54077" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="Vector" d="M6.91 3.46C6.81 3.56 6.64 3.56 6.53 3.46L3.69 0.62C3.58 0.52 3.41 0.52 3.3 0.62L0.46 3.46C0.35 3.56 0.18 3.56 0.08 3.46C-0.03 3.35 -0.03 3.18 0.08 3.07L2.91 0.23C3.08 0.08 3.29 0 3.5 0C3.7 0 3.91 0.08 4.08 0.23L6.91 3.07C7.02 3.18 7.02 3.35 6.91 3.46Z" fill="#444B58" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+            <div class="full-cards full-cards-active"></div>
+        </div>
+        <form action="#">
+            <input type="text" placeholder="Ваше имя" id="fullName">
+            <input type="number" placeholder="Номер телефона" id="fullNumber">
+            <input type="email" placeholder="E-mail" id="fullEmail">
+            <button class="default-btn">Оформить заказ</button>
+        </form>
+     </div>
+     <div class="modal-background"></div>
+     <!-- /fullCart -->
+
+    <!-- phone-cart -->
+    <div class="phone-cart">
+        <button id="phoneCart"></button>
+        <div id="countMiniCart">
+            <span id="elInMiniCart2">1</span>
+        </div>
+    </div> 
+    <!-- /phone-cart -->
+
+    <!-- main -->
+    <main>
+        <div class="container">
+            <header>
+                <a href="#" class="logo">SneakMax</a>
+                <nav><a href="#Hcatalog">Каталог</a><a href="#Habout">О нас</a><a href="#Hideal">Подбор товара</a><a href="#Hteam">Наша команда</a><a href="#Hquestions">Доставка и оплата</a><a href="#Hcontacts">Контакты</a><a id="cartText" href="#">Корзина</a></nav>
+                <button class="mobile-menu-btn"><span></span><span></span><span></span></button>
+                <div class="mobile-menu">
+                    <nav class="mobile-nav"><a href="#Hcatalog">Каталог</a><a href="#Habout">О нас</a><a href="#Hideal">Подбор товара</a><a href="#Hteam">Наша команда</a><a href="#Hquestions">Доставка и оплата</a><a href="#Hcontacts">Контакты</a><a id="cartText" href="#">Корзина</a></nav>
+                </div>   
+                <div class="minicart-icn">
+                    <svg id="cartBtn" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                        <path d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461 6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164 0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617 6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421 4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434 7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797 15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798 4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z" fill="white"/>
+                    </svg>
+                    <div id="countMiniCart">
+                        <span id="elInMiniCart">1</span>
+                    </div>
+                </div>
+            <!-- card-head -->
+            <div class="cart-head">
+                <h5>Ваша корзина пуста</h5>
+                <div class="cart-head__content"></div>
+                <div class="cart-head__footer">
+                    <div class="cart-head-cost">
+                        <p>Итого:</p>
+                        <span>25 789</span>
+                    </div>
+                    <button id="fullCartOpen" class="default-btn">Перейти в корзину</button>
+                </div>
+            </div>
+            <div class="modal-background"></div>
+            <!-- /card-head -->
+            </header>
+            <div class="main--content">
+                <h3>Кроссовки известных брендов <br> с доставкой по России и СНГ</h3>
+                <p>Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, <br> Converse и многие другие по низким ценам</p>
+                <a href="#Hcatalog"><button class="default-btn">Перейти к покупкам</button></a>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+
+    <!-- section -->
+    <section id="Hcatalog" class="catalog">
+        <div class="container">
+            <h3 class="section-h">Каталог</h3>
+            <p class="nonFilter">Ничего не найдено</p>
+            <button id="filBtn">Фильтры</button>
+            <div class="flex-box">
+                <form class="filter">
+                    <h4>Подбор <br> по параметрам</h4>
+                    <p class="title">Цена, руб</p>
+                    <div class="filter--price">
+                        <input type="number" class="pole" value="1850"></input><input class="pole2" type="number" value="25768"></input>
+                        <div class="price-container">
+                            <div id="body-trans"></div>
+                            <div id="body"></div>
+                            <div id="min"></div>
+                            <div id="max"></div>
+                          </div>
+                    </div>
+                    <p class="title">Пол</p>
+                    <div class="flex-box">
+                        <div class="men">
+                            <input id="Men" type="checkbox">
+                            <label for="Men"><span class="fake-chek"></span>мужской</label>
+                        </div>
+                        <div class="women">
+                            <input id="Women" type="checkbox">
+                            <label for="Women"><span class="fake-chek"></span>женский</label>
+                        </div>
+                    </div>
+                    <p class="title" style="margin-bottom: 10px;">Размер</p>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" id="35"><label for="35"></label><p class="in-table">35</p></td>
+                            <td><input type="checkbox" id="36"><label for="36"></label><p class="in-table">36</p></td>
+                            <td><input type="checkbox" id="37"><label for="37"></label><p class="in-table">37</p></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="38"><label for="38"></label><p class="in-table">38</p></td>
+                            <td><input type="checkbox" id="39"><label for="39"></label><p class="in-table">39</p></td>
+                            <td><input type="checkbox" id="40"><label for="40"></label><p class="in-table">40</p></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="41"><label for="41"></label><p class="in-table">41</p></td>
+                            <td><input type="checkbox" id="42"><label for="42"></label><p class="in-table">42</p></td>
+                            <td><input type="checkbox" id="43"><label for="43"></label><p class="in-table">43</p></td>
+                        </tr>
+                    </table>
+                    <button id="confirmBtn">Применить</button>
+                    <button type="reset">сбросить</button>
+                </form>
+                <div class="modal-background"></div>
+                <div class="cards-container">
+                    <div href="#" class="cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Женские кроссовки Puma Force 1</h6>
+                        <p id="cost">8 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">5 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Женские кроссовки Puma Force 1</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/867bca0039568c805d55cbfde9f23808 17.png" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Женские кроссовки Puma Force 1</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card hidden-cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card hidden-cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">25 000 р</p>
+                    </div>
+                    <div href="#" class="cross-card hidden-cross-card">
+                        <img src="./img/image.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="inCart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="#444B58"/>
+                                <path d="M53.9999 36.2857H49.2454L44.2502 27.4507C44.0025 27.0118 43.465 26.8685 43.0497 27.1324C42.6353 27.3963 42.5011 27.9666 42.7498 28.4065L47.2046 36.2857H32.7954L37.2502 28.4064C37.4989 27.9666 37.3647 27.3962 36.9503 27.1323C36.5342 26.8685 35.9984 27.0117 35.7498 27.4506L30.7546 36.2857H26V38.1428H27.8991L30.1221 50.7266C30.3545 52.0442 31.4397 53 32.7026 53H47.2974C48.5603 53 49.6455 52.0442 49.8771 50.7275L52.1008 38.1428H54L53.9999 36.2857ZM48.1569 50.3857C48.08 50.8246 47.7186 51.1429 47.2973 51.1429H32.7026C32.2814 51.1429 31.92 50.8246 31.8422 50.3848L29.679 38.1428H50.321L48.1569 50.3857Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h6>Кроссовки Nike Air Force 1 &apos;07 QS</h6>
+                        <p id="cost">11 000 р</p>
+                    </div>
+                    <button id="showMore" class="default-btn">Показать еще</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /section -->
+
+    <!-- section -->
+    <section id="Habout" class="about">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="container">
+            <div class="about__content">
+                <h3>Пара слов о нас</h3>
+                <p>Спорт держит нас в форме. Учит дисциплине. Объединяет нас. Через спорт мы можем менять жизни. В том числе с помощью воодушевляющих историй спортсменов. Чтобы помочь тебе подняться и двигаться вперед.</p>
+                <div class="line-logo"><a href="#">SneakMax</a></div>
+            </div>
+            <img src="./img/pexels-budgeron-bach-5158825 2.jpg" alt="">
+        </div>
+    </section>
+    <!-- /section -->
+
+    <!-- section -->
+    <section id="Hideal" class="ideal">
+        <div class="ideal-main">
+            <div class="container ideal__container">
+                <h3 class="section-h">Мы подберем идеальную пару для вас</h3>
+                <span>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</span>
+                <div class="ideal__content">
+                    <h4>Какой тип кроссовок рассматриваете?</h4>
+                    <div class="ideal-cards__container">
+                        <label for="Icard1">
+                            <div class="ideal-card">
+                                <img src="./img/фото кроссовка.jpg" alt="">
+                                <input id="Icard1" type="checkbox">
+                                <label for="Icard1"><span class="fake-chek"></span>кеды</label>
+                            </div>
+                        </label>
+                        <label for="Icard2">
+                            <div class="ideal-card">
+                                <img src="./img/фото кроссовка.jpg" alt="">
+                                <input id="Icard2" type="checkbox">
+                                <label for="Icard2"><span class="fake-chek"></span>кеды</label>
+                            </div>
+                        </label>
+                        <label for="Icard3">
+                            <div class="ideal-card">
+                                <img src="./img/фото кроссовка.jpg" alt="">
+                                <input id="Icard3" type="checkbox">
+                                <label for="Icard3"><span class="fake-chek"></span>кеды</label>
+                            </div>
+                        </label>
+                        <label for="Icard4">
+                            <div class="ideal-card">
+                                <img src="./img/фото кроссовка.jpg" alt="">
+                                <input id="Icard4" type="checkbox">
+                                <label for="Icard4"><span class="fake-chek"></span>кеды</label>
+                            </div>
+                        </label>
+                        <label for="Icard5">
+                            <div class="ideal-card">
+                                <img src="./img/фото кроссовка.jpg" alt="">
+                                <input id="Icard5" type="checkbox">
+                                <label for="Icard5"><span class="fake-chek"></span>кеды</label>
+                            </div>
+                        </label>
+                        <label for="Icard6">
+                            <div class="ideal-card">
+                                <img src="./img/фото кроссовка.jpg" alt="">
+                                <input id="Icard6" type="checkbox">
+                                <label for="Icard6"><span class="fake-chek"></span>кеды</label>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="ideal__footer">
+                    <p>1 из 3</p>
+                    <button id="stepBtn1">Следующий шаг</button>
+                </div>
+            </div>
+        </div>
+        <div class="ideal-main ideal-hide">
+            <div class="container ideal__container">
+                <h3 class="section-h">Мы подберем идеальную пару для вас</h3>
+                <span>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</span>
+                <div class="ideal__content">
+                    <h4 style="margin-bottom: 40px;">Какой размер вам подойдет?</h4>
+                    <div class="ideal__filter">
+                        <div class="ideal__checkbox">
+                            <input id="Ichek1" type="checkbox">
+                            <label for="Ichek1"><span class="fake-chek"></span>менее 36</label>
+                        </div>
+                        <div class="ideal__checkbox">
+                            <input id="Ichek2" type="checkbox">
+                            <label for="Ichek2"><span class="fake-chek"></span>36-38</label>
+                        </div>
+                        <div class="ideal__checkbox">
+                            <input id="Ichek3" type="checkbox">
+                            <label for="Ichek3"><span class="fake-chek"></span>39-41</label>
+                        </div>
+                        <div class="ideal__checkbox">
+                            <input id="Ichek4" type="checkbox">
+                            <label for="Ichek4"><span class="fake-chek"></span>42-44</label>
+                        </div>
+                        <div class="ideal__checkbox">
+                            <input id="Ichek5" type="checkbox">
+                            <label for="Ichek5"><span class="fake-chek"></span>45 и больше</label>
+                        </div>
+                    </div>
+                    <img id="cross" src="./img/Rectangle 45.png" alt="">
+                </div>
+                <div class="ideal__footer">
+                    <p>2 из 3</p>
+                    <button id="stepBtn2">Следующий шаг</button>
+                </div>
+            </div>
+        </div>
+        <div class="ideal-main ideal-hide">
+            <div class="container ideal__container">
+                <h3 class="section-h">Мы подберем идеальную пару для вас</h3>
+                <span>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями</span>
+                <div class="ideal__content">
+                    <h4>Уточните какие-либо моменты</h4>
+                    <textarea placeholder="Введите сообщение"></textarea>
+                </div>
+                <div class="ideal__footer">
+                    <p>3 из 3</p>
+                    <button id="stepBtn3">Следующий шаг</button>
+                </div>
+            </div>
+        </div>
+        <div class="ideal-main ideal-hide">
+            <div class="container ideal__container">
+                <h3 class="section-h" style="margin-top: 20px;">Ваша подборка готова!</h3>
+                <p class="ideal-last">Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог</p>
+                <div class="flex-box">
+                    <form action="#">
+                        <h4>Получить предложение</h4>
+                        <p>Получите подборку подходящих для вас моделей на почту</p>
+                        <input id="lInpt" type="text" placeholder="Ваше имя"><input id="lInpt" type="text" placeholder="E-mail">
+                        <button id="fBtn" class="default-btn">Получить</button>
+                    </form>
+                    <div id="phoneBtn"><img src="./img/iPhone 11 Pro.png" alt=""><button id="fBtn" class="default-btn">Получить</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="ideal-main ideal-hide">
+            <div class="ideal-send">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
+                    <path d="M12.0184 24.5183C11.7188 24.8274 11.3101 25 10.8854 25C10.4607 25 10.0521 24.8274 9.75241 24.5183L0.704327 15.2351C-0.234776 14.2717 -0.234776 12.71 0.704327 11.7483L1.83734 10.5861C2.77644 9.62272 4.29728 9.62272 5.23638 10.5861L10.8854 16.3809L26.1498 0.722505C27.0889 -0.240835 28.6114 -0.240835 29.5489 0.722505L30.6819 1.88476C31.621 2.8481 31.621 4.40983 30.6819 5.37153L12.0184 24.5183Z" fill="#0E5A4C"/>
+                </svg>
+                <p>Отправлено</p>
+            </div>
+        </div>
+    </section>
+    <!-- /section -->
+
+    <!-- section -->
+    <section id="Hteam" class="team">
+        <div class="circle circle-team-one"></div>
+        <div class="circle circle-team-two"></div>
+        <div class="circle circle-team-three"></div>
+        <div class="container">
+            <h3>Наша команда</h3>
+            <div class="team-cards__container">
+                <div class="team-card">
+                    <img src="./img/jack-irwin-djIR42oN7Js-unsplash 1.png" alt="">
+                    <h4>Максим Золотарев</h4>
+                    <p>Администратор</p>
+                </div>
+                <div class="team-card">
+                    <img src="./img/2.png" alt="">
+                    <h4>Максим Золотарев</h4>
+                    <p>Администратор</p>
+                </div>
+                <div class="team-card">
+                    <img src="./img/3.jpg" alt="">
+                    <h4>Максим Золотарев</h4>
+                    <p>Администратор</p>
+                </div>
+                <div class="team-card">
+                    <img src="./img/4.png" alt="">
+                    <h4>Максим Золотарев</h4>
+                    <p>Администратор</p>
+                </div>
+                <div class="team-card">
+                    <img src="./img/5.png" alt="">
+                    <h4>Максим Золотарев</h4>
+                    <p>Администратор</p>
+                </div>
+                <div class="team-card">
+                    <img src="./img/6.png" alt="">
+                    <h4>Максим Золотарев</h4>
+                    <p>Администратор</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- team 992 -->
+    <div class="slide">
+        <div class="container">
+            <h3>Наша команда</h3>
+            <div class="slide-container">
+                <div class="slide-bar">
+                    <div class="team-card">
+                        <img src="./img/jack-irwin-djIR42oN7Js-unsplash 1.png" alt="">
+                        <h4>Максим Золотарев</h4>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="./img/2.png" alt="">
+                        <h4>Максим Золотарев</h4>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="./img/3.jpg" alt="">
+                        <h4>Максим Золотарев</h4>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="./img/4.png" alt="">
+                        <h4>Максим Золотарев</h4>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="./img/5.png" alt="">
+                        <h4>Максим Золотарев</h4>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="./img/6.png" alt="">
+                        <h4>Максим Золотарев</h4>
+                        <p>Администратор</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /team 992 -->
+
+    <!-- /section -->
+
+    <!-- section -->
+    <section id="Hquestions" class="questions">
+        <div class="container">
+            <h3 class="section-h">Часто задаваемые вопросы</h3>
+            <div class="questions__container">
+                <input type="checkbox" name="qu" id="questionInput" checked>
+                <label for="questionInput" class="question">
+                    <div class="fake-question">
+                        <div class="qP1"></div>
+                        <div class="qP2"></div>
+                    </div>
+                    <h5>Вопрос 1</h5>
+                    <p>А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми</p>
+                </label>
+                <input type="checkbox" name="qu" id="questionInput2">
+                <label for="questionInput2" class="question">
+                    <div class="fake-question">
+                        <div class="qP1"></div>
+                        <div class="qP2"></div>
+                    </div>
+                    <h5>Вопрос 2</h5>
+                    <p>А это ответ 2: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми</p>
+                </label>
+            </div>
+        </div>
+    </section>
+    <!-- /section -->
+
+    <!-- section -->
+    <section id="Hcontacts" class="contacts">
+        <div class="container">
+            <div class="flex-box">
+                <div class="contacts__content">
+                    <h3 class="section-h">Контакты</h3>
+                    <span>Главный офис <div class="qu">?</div>
+                        <div class="contact-question">
+                            Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара просьба задавать в отдел продаж
+                        </div>
+                    </span>
+                    <p class="number">+7 800 789 89 89</p>
+                    <p>г. Санкт-Петербург, Комсомольская, 43 к1</p>
+                    <span>отдел продаж</span>
+                    <p class="number">+7 800 789 89 89</p>
+                    <p>г. Санкт-Петербург, Комсомольская, 43 к1</p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="45" viewBox="0 0 44 45" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 22.4861C0 10.3986 9.84974 0.599854 22 0.599854C34.1503 0.599854 44 10.3986 44 22.4861C44 34.5735 34.1503 44.3723 22 44.3723C9.84974 44.3723 0 34.5735 0 22.4861Z" fill="#0E5A4C"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1508 29.6689C23.1508 29.6689 23.5743 29.6229 23.7912 29.3954C23.9898 29.1869 23.9829 28.7935 23.9829 28.7935C23.9829 28.7935 23.9565 26.9565 24.8299 26.6853C25.6908 26.4185 26.796 28.4618 27.9691 29.2474C28.8551 29.8415 29.5277 29.7115 29.5277 29.7115L32.6622 29.6689C32.6622 29.6689 34.3012 29.5702 33.5242 28.3116C33.4599 28.2085 33.0708 27.3802 31.1942 25.6788C29.2281 23.8978 29.4921 24.1859 31.8588 21.1048C33.3004 19.2286 33.8766 18.0831 33.6964 17.5933C33.5253 17.1248 32.4648 17.2492 32.4648 17.2492L28.9366 17.2705C28.9366 17.2705 28.6749 17.2358 28.481 17.349C28.2916 17.4599 28.1688 17.7188 28.1688 17.7188C28.1688 17.7188 27.611 19.1703 26.8661 20.4054C25.2948 23.0102 24.667 23.148 24.4099 22.9866C23.8119 22.6089 23.9611 21.4713 23.9611 20.6632C23.9611 18.138 24.3536 17.0856 23.1978 16.8132C22.8145 16.7224 22.5321 16.663 21.5508 16.653C20.2917 16.6406 19.2266 16.6574 18.6229 16.9455C18.2212 17.1371 17.9113 17.5653 18.1007 17.5899C18.3336 17.6202 18.8616 17.7289 19.1417 18.101C19.5032 18.5819 19.4906 19.6601 19.4906 19.6601C19.4906 19.6601 19.6983 22.6324 19.0051 23.0012C18.5299 23.2545 17.878 22.7378 16.4766 20.374C15.7592 19.1636 15.2175 17.8253 15.2175 17.8253C15.2175 17.8253 15.113 17.5754 14.926 17.4409C14.6999 17.2784 14.3842 17.2279 14.3842 17.2279L11.0316 17.2492C11.0316 17.2492 10.5278 17.2627 10.343 17.4767C10.1788 17.6662 10.3303 18.0596 10.3303 18.0596C10.3303 18.0596 12.9553 24.057 15.9279 27.0798C18.6539 29.8504 21.7482 29.6689 21.7482 29.6689H23.1508Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="45" viewBox="0 0 44 45" fill="none">
+                            <mask id="mask0_47_762" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="45">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 22.4861C0 10.3986 9.84974 0.599854 22 0.599854C34.1503 0.599854 44 10.3986 44 22.4861C44 34.5735 34.1503 44.3723 22 44.3723C9.84974 44.3723 0 34.5735 0 22.4861Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_47_762)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 22.4861C0 10.3986 9.84974 0.599854 22 0.599854C34.1503 0.599854 44 10.3986 44 22.4861C44 34.5735 34.1503 44.3723 22 44.3723C9.84974 44.3723 0 34.5735 0 22.4861Z" fill="#0E5A4C"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.001 10.8134C18.8144 10.8134 18.4145 10.8272 17.1629 10.8839C15.9138 10.9408 15.0612 11.1375 14.3151 11.4262C13.5434 11.7243 12.8888 12.1231 12.2366 12.7722C11.5839 13.421 11.183 14.0722 10.8824 14.8397C10.5915 15.5822 10.3935 16.4306 10.3372 17.6728C10.2813 18.9179 10.2666 19.316 10.2666 22.4861C10.2666 25.6562 10.2808 26.0529 10.3375 27.298C10.3949 28.5406 10.5927 29.3889 10.8826 30.1311C11.1825 30.8988 11.5834 31.55 12.2359 32.1988C12.8878 32.8481 13.5424 33.2479 14.3137 33.5461C15.0602 33.8347 15.9131 34.0315 17.162 34.0884C18.4135 34.145 18.8132 34.1589 21.9996 34.1589C25.1864 34.1589 25.5851 34.145 26.8367 34.0884C28.0858 34.0315 28.9394 33.8347 29.686 33.5461C30.4574 33.2479 31.1111 32.8481 31.763 32.1988C32.4157 31.55 32.8166 30.8988 33.1173 30.1313C33.4057 29.3889 33.6037 28.5404 33.6624 27.2982C33.7186 26.0531 33.7333 25.6562 33.7333 22.4861C33.7333 19.316 33.7186 18.9181 33.6624 17.673C33.6037 16.4304 33.4057 15.5822 33.1173 14.84C32.8166 14.0722 32.4157 13.421 31.763 12.7722C31.1104 12.1229 30.4577 11.7241 29.6852 11.4262C28.9372 11.1375 28.0841 10.9408 26.835 10.8839C25.5834 10.8272 25.185 10.8134 21.9974 10.8134H22.001ZM20.9486 12.9172C21.261 12.9167 21.6096 12.9172 22.0012 12.9172C25.134 12.9172 25.5053 12.9284 26.7425 12.9843C27.8865 13.0363 28.5074 13.2265 28.921 13.3863C29.4686 13.5978 29.8589 13.8508 30.2694 14.2593C30.68 14.6678 30.9343 15.0569 31.1474 15.6017C31.308 16.0126 31.4994 16.6303 31.5515 17.7684C31.6077 18.9989 31.6199 19.3686 31.6199 22.4837C31.6199 25.5989 31.6077 25.9685 31.5515 27.199C31.4992 28.3371 31.308 28.9548 31.1474 29.3658C30.9347 29.9105 30.68 30.2984 30.2694 30.7067C29.8587 31.1153 29.4688 31.3682 28.921 31.5797C28.5079 31.7402 27.8865 31.9299 26.7425 31.982C25.5056 32.0379 25.134 32.05 22.0012 32.05C18.8681 32.05 18.4968 32.0379 17.2599 31.982C16.1159 31.9294 15.495 31.7393 15.0811 31.5795C14.5336 31.3679 14.1425 31.115 13.7318 30.7065C13.3211 30.2979 13.0669 29.9098 12.8537 29.3648C12.6931 28.9538 12.5017 28.3362 12.4497 27.1981C12.3934 25.9676 12.3822 25.5979 12.3822 22.4808C12.3822 19.3637 12.3934 18.996 12.4497 17.7655C12.502 16.6274 12.6931 16.0097 12.8537 15.5983C13.0664 15.0535 13.3211 14.6644 13.7318 14.2559C14.1425 13.8473 14.5336 13.5944 15.0811 13.3824C15.4947 13.2219 16.1159 13.0322 17.2599 12.9799C18.3423 12.9313 18.7618 12.9167 20.9486 12.9143V12.9172ZM28.2643 14.8551C27.487 14.8551 26.8563 15.4818 26.8563 16.2553C26.8563 17.0287 27.487 17.6561 28.2643 17.6561C29.0417 17.6561 29.6724 17.0287 29.6724 16.2553C29.6724 15.482 29.0417 14.8546 28.2643 14.8546V14.8551ZM22.0011 16.4919C18.6734 16.4919 15.9755 19.1759 15.9755 22.4864C15.9755 25.7968 18.6734 28.4796 22.0011 28.4796C25.3287 28.4796 28.0257 25.7968 28.0257 22.4864C28.0257 19.1759 25.3285 16.4919 22.0008 16.4919H22.0011ZM22.0012 18.5954C24.1612 18.5954 25.9124 20.3374 25.9124 22.4864C25.9124 24.6351 24.1612 26.3773 22.0012 26.3773C19.8411 26.3773 18.0901 24.6351 18.0901 22.4864C18.0901 20.3374 19.8411 18.5954 22.0012 18.5954Z" fill="white"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A85c746a5e512c901a473a4bce49d62c463a76290d53351de7145509bf6d1a8d9&amp;source=constructor" width="680" height="497" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /section -->
+
+    <!-- section -->
+    <section class="inst">
+        <div class="container flex-box">
+            <form id="formInst" action="">
+                <h3>Есть вопросы?</h3>
+                <p>Заполните форму и наш менеджер свяжется с вами</p>
+                <span>Это поле обязательно</span>
+                <input class="inst-active" id="instInput" type="text" placeholder="Ваше имя">
+                <span>Это поле обязательно</span>
+                <input id="instInput" type="text" placeholder="Номер телефона">
+                <button id="iBtn" class="default-btn">Отправить</button>
+            </form>
+            <div class="modal-background"></div>
+            <div class="insta">
+                <a href="https://www.instagram.com/" class="inst-logo"><img src="./img/iLogo.png" alt="ops"></a>
+                <div class="is-container">
+                    <div class="is-left">
+                        <a href="https://www.instagram.com/"><img src="./img/is1.png" alt="ops"></a>
+                        <a href="https://www.instagram.com/"><img src="./img/is2.png" alt="ops"></a>
+                    </div>
+                    <div class="is-center"><img src="./img/is3.jpg" alt="ops"></div>
+                    <div class="is-right">
+                        <a href="https://www.instagram.com/"><img src="./img/is4.jpg" alt="ops"></a>
+                        <a href="https://www.instagram.com/"><img src="./img/is5.jpg" alt="ops"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="forFormBtn">Оставить заявку</button>
+    </section>
+    <!-- section -->
+
+    <!--footer-->
+    <footer>
+        <div class="container flex-box">
+            <a href="#" class="logo">SneakMax</a>
+            <button class="mobile-menu-btn"><span></span><span></span><span></span></button>
+            <nav><a href="#Hcatalog">Каталог</a><a href="#Habout">О нас</a><a href="#Hideal">Подбор товара</a><a href="#Hteam">Наша команда</a><a href="#Hquestions">Доставка и оплата</a><a href="#Hcontacts">Контакты</a><a href="#">Корзина</a></nav>
+            <a href="#"><img src="./img/free-icon-up-6364325.png" alt="" width="30px"></a>
+        </div>
+    </footer>
+    <!--/footer-->
+
+<script src="./js/main.js"></script>
+<script src="./js/filters.js"></script>
+<script src="./js/form.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/cart.js"></script>
+<script src="./js/media.js"></script>
+</body>
+</html>

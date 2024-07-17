@@ -1,0 +1,316 @@
+.full-carts{
+    transition: all .2s ease-in;
+    opacity: 0;
+    visibility: hidden;
+    padding: 40px;
+    background: #FFF;
+    position: fixed;
+    z-index: 10000;
+    width: 580px;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    top: 25%;
+    strong{
+        color: var(--gray);
+        font-family: "Intro";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0%;
+    }
+    .full-cart-top{
+        display: flex;
+        justify-content: space-between;
+        p{
+            color: var(--gray);
+            font-size: 20px;
+            font-family: "Intro";
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+        span{
+            font-family: "IntroBook";
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--light-gray);
+        }
+    }
+    .full-cart-container{
+        overflow-y: hidden;
+        max-height: 415px;
+        margin: 40px 0;
+        border: 1px solid rgb(217, 217, 217);
+        border-radius: 4px;
+        padding: 24px;
+        #space{
+            display: none;
+        }
+        #summ{
+            margin: 20px 0;
+        }
+        span{
+            color: var(--light-gray);
+            font-family: "IntroBook";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0%;
+            margin-right: 10px;
+        }
+        button{
+            font-family: "IntroBook";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0%;
+            color: var(--gray);
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            #vector{
+                display: inline-block;
+                svg{
+                    margin-bottom: 2px;
+                    width: 7px;
+                }
+            }
+        }
+        button:focus{
+            outline: none;
+        }
+        .full-cart {
+            .full-cart__content {
+                .full-cart__card {
+                    height: 80px;
+                    width: 440px;
+                    padding: 17px 0;
+                    img{
+                        height: 45px;
+                        width: 80px;
+                        margin-right: 10px;
+                    }
+                    .full-cart__card__content {
+                        margin-right: 7px;
+                        h3{
+                            white-space: nowrap;
+                            color: var(--gray);
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 14px;
+                            letter-spacing: 0%;
+                            font-family: "IntroBook";
+                        }
+                        @media (max-width:576px){
+                            h3{
+                                white-space: wrap;
+                            }
+                        }
+                    }
+                    #fullDelete{
+                        padding: 0;
+                        margin-right: 0px;
+                        margin-left: auto;
+                        span{
+                            margin: 0;
+                        }
+                    }
+                }
+                @media (max-width:576px){
+                    .full-cart__card{
+                       width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:576px){
+        .full-cart-container{
+            margin-top: 20px;
+            overflow-x: hidden;
+            margin-bottom: 10px;
+        }
+    }
+    input{
+        width: 100%;
+        border-radius: 4px;
+        background: #F7F7F7;
+        padding: 20px;
+        border: none;
+    }
+    input:focus{
+        border: none;
+        outline: none;
+    }
+    input + input {
+        margin-top: 10px;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+    .default-btn {
+        height: 60px;
+        width: 221px;
+        margin-top: 29px;
+    }
+    @media (max-width:576px){
+        .default-btn{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+}
+@media (max-width:576px){
+    .full-carts{
+        width: 100vw;
+        padding: 20px;
+        height: 100vh;
+    }
+}
+.phone-cart{
+    display: none;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    z-index: 9999;
+    width: 55px;
+    height: 55px;
+    button{
+        transition: all .2s ease-in;
+        border: none;
+        border-radius: 50%;
+        background: var(--accent);
+        width: 55px;
+        height: 55px;
+        position: relative;
+        opacity: .8;
+    }
+    button::after{
+        position: absolute;
+        content: url(../img/Vector.svg);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button:hover,
+    button:active,
+    button:focus{
+        opacity: 1;
+        outline: none;
+    }
+    #countMiniCart{
+        opacity: 1;
+        width: 16px;
+        height: 16px;
+        background-color: #FFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        transform: translate(50%, 50%);
+        right: 10px;
+        border-right: #F14F4F 1px solid;
+        border-bottom: #F14F4F 1px solid;
+        border-top: none;
+        border-left: none;
+        span{
+            font-family: "IntroBook";
+            font-size: 14px;
+            line-height: normal;
+            color: #F14F4F;
+        }
+    }
+}
+@media (max-width:992px){
+    .phone-cart{
+        display: block;
+    }
+}
+#forBG{
+    background-color: #fff;
+}
+.full-cards{
+    visibility: hidden;
+}
+.full-cards-active{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 235px;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+.full-cards-active::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(77, 77, 77, 0.10);
+    border-radius: 5px;
+}
+.full-cart-active{
+    top: 30%;
+    visibility: visible;
+    opacity: 1;
+}
+.full-cart-active + .modal-background{
+    visibility: visible;
+    opacity: 0.4;
+}
+@keyframes cartAnim {
+    0%{
+        transform: none;
+        z-index: -50;
+    }
+    80%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        visibility: hidden;
+        transform: translateY(-100%);
+        z-index: -50;
+    }
+}
+@keyframes cartAnimAlt {
+    100%{
+        transform: none;
+        z-index: inherit;
+    }
+    85%{
+        transform: none;
+    }
+    11%{
+        transform: translateY(-100%);
+        z-index: -50;
+    }
+    62%{
+        z-index: -50;
+        opacity: 0;
+        visibility: visible;
+    }
+    0%{
+        z-index: -50;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+@keyframes cartContainer {
+    0%{
+        height: 415px;
+    }
+    100%{
+        height: 174px;
+    }
+}
+@keyframes cartContainerAlt {
+    100%{
+        height: 415px;
+    }
+    0%{
+        height: 174px;
+    }
+}

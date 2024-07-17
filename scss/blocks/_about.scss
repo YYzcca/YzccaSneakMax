@@ -1,0 +1,179 @@
+.about{
+    background: var(--bg);
+    padding: 0;
+    color: #FFF;
+    overflow: hidden;
+    position: relative;
+    .circle-one{
+        width: 644px;
+        height: 644px;
+        transform: translate(-50%, -50%);
+    }
+    @media(max-width: 1200px){
+        .circle-one{
+            width: 504px;
+            height: 504px;
+        }
+    }
+    @media(max-width: 768px){
+        .circle-two{
+            height: 460px;
+            width:460px;
+        }
+    }
+    .circle-two{
+        position: absolute;
+        height: 297px;
+        width: 297px;
+        left: 253px;
+        transform: translateY(-60%);
+    }
+    @media(max-width: 1200px){
+        .circle-two{
+            height: 297px;
+            width: 297px;
+            left: 153px;
+        }
+    }
+    @media(max-width: 768px){
+        .circle-two{
+            height: 247px;
+            width: 247px;
+            left: 97px;
+        }
+    }
+    .circle-two::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: var(--accent);
+        position: absolute;
+        bottom: 42px;
+        border-radius: 50%;
+        right: 29px;
+    }
+    @media(max-width: 768px){
+        .circle-two::after{
+            width: 13px;
+            height: 13px;
+            bottom: 32px;
+            border-radius: 50%;
+            right: 29px;
+        }
+    }
+    h3{
+        font-weight: 700;
+        line-height: normal;
+        font-size: 30px;
+    }
+    p{
+        font-family: "IntroBook";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        max-width: 380px;
+        margin: 20px 0;
+    }
+    a{
+        transition: color 0.1s ease-in;
+        font-family: inherit;
+        color: #FFF;
+    }
+    @media(max-width: 576px){
+        a{
+            margin-right: 15px;
+        }
+    }
+    a:hover{
+        color:#dbdbdb;
+    }
+    .line-logo{
+        font-weight: 700;
+        line-height: normal;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: -65px;
+    }
+    @media(max-width: 1200px){
+        .line-logo{
+            margin-right: -15px;
+        }
+    }
+    @media(max-width: 1200px){
+        .line-logo{
+            margin-right: 15px;
+        }
+    }
+    .line-logo::before{
+        content: '';
+        margin-right: 20px;
+        height: 3px;
+        background: #FFF;
+        width: 30px;
+        display: inline-block;
+    }
+    .container{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        img{
+            clip-path: polygon(0 100%, 25% 0, 80% 0, 100% 0%, 100% 80%, 100% 0%, 75% 100%);
+        }
+        @media(max-width: 1200px){
+            img{
+                margin-right: 50px;
+                margin-left: auto;
+            }
+        }
+        @media(max-width: 992px){
+            img{
+                width: 450px;
+            }
+        }
+        @media(max-width: 768px){
+            img{
+                margin-right: -200px;
+            }
+        }
+        @media(max-width: 576px){
+            img{
+                right: 120px;
+                width: 250px;
+                height: 100%;
+                position: absolute;
+            }
+        }
+    }
+    @media(max-width: 1200px){
+        .container{
+            justify-content: space-between;
+            width: 100%;
+            margin-left: 87px;
+            margin-right: 0;
+            max-width: 100%;
+        }
+    }
+    @media(max-width: 768px){
+        .container{
+            margin-right: 0;
+            padding-right: 0;
+            width: auto;
+        }
+    }
+    @media(max-width: 576px){
+        .container{
+            padding-right: 0;
+            margin: 0;
+            width: 100%;
+            padding: 10px;
+            height: 100%;
+        }
+    }
+}
+@media(max-width: 576px){
+    .about__content{
+        max-width: 55vw;
+    }
+}

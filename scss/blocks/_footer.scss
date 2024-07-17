@@ -1,0 +1,91 @@
+footer{
+    border-bottom: 1px rgba(255, 255, 255, 0.50) solid;
+    padding: 20px 0;
+    display: flex;
+    background: var(--gray);
+    .flex-box{
+        justify-content: space-between;
+        align-items: center;
+        nav{
+            margin-left: auto;
+            margin-right: 10px;
+            a{
+                font-family: "Intro";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                color: #FFF;
+            }
+            @media(max-width: 992px){
+                a{
+                    content: url(/img/catalog.svg);
+                    width: 30px;
+                    height: 30px;
+                    fill: darkgreen;
+                }
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            a + a {
+                margin-left: 40px;
+            }
+            @media(max-width: 1200px){
+                a + a {
+                    margin-left: 25px;
+                }
+            }
+            @media(max-width: 992px){
+                a + a {
+                    content: url(/img/about.svg);
+                    margin-left: 40px;
+                }
+            }
+            @media(max-width: 992px){
+                a + a + a {
+                    content: url(/img/podbor.svg);
+                    fill: darkgreen;
+                }
+            }
+            @media(max-width: 992px){
+                a + a + a + a {
+                    content: url(/img/team.svg);
+                }
+            }
+            @media(max-width: 992px){
+                a + a + a + a + a {
+                    content: url(/img/dostavka.svg);
+                }
+            }
+            @media(max-width: 992px){
+                a + a + a + a + a + a {
+                    content: url(/img/contacts.svg);
+                }
+            }
+            @media(max-width: 992px){
+                a + a + a + a + a + a + a {
+                    content: url(/img/Vector.svg);
+                }
+            }
+        }
+        @media(max-width: 1200px){
+            nav{
+                margin-left: 55px;
+                margin-right: 0;
+            }
+        }
+        @media(max-width: 768px){
+            nav{
+                display: none;
+            }
+        }
+    }
+    img{
+        display: none;
+    }
+    @media(max-width: 768px){
+        img{
+            display: inline-block;
+        }
+    }
+}
